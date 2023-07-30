@@ -2,25 +2,30 @@ import './Navigation.css';
 import {FiHeart} from 'react-icons/fi';
 import {AiOutlineShoppingCart,AiOutlineUserAdd} from 'react-icons/ai';
 
-function Navigation() {
+const Navigation = ({ handleInputChange, query }) => {
   return (
     <nav>
-      <div className='navigation'>
-        <input type='text' className='search-input' placeholder='Search' />
+      <div className="nav-container">
+        <input
+          className="search-input"
+          type="text"
+          onChange={handleInputChange}
+          value={query}
+          placeholder="Search for shoes"
+        />
       </div>
-      <div className='profile'>
-        <a>
-          <FiHeart className='nav-icon'/>
+      <div className="profile-container">
+        <a href="#">
+          <FiHeart className="nav-icons" />
         </a>
-        <a>
-          <AiOutlineShoppingCart className='nav-icon'/>
+        <a href="">
+          <AiOutlineShoppingCart className="nav-icons" />
         </a>
-        <a>
-          <AiOutlineUserAdd className='nav-icon'/>
+        <a href="">
+          <AiOutlineUserAdd className="nav-icons" />
         </a>
       </div>
     </nav>
-
-  )
-}
+  );
+};
 export default Navigation;

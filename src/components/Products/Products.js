@@ -1,11 +1,10 @@
 import './Products.css';
-import Card from '../Card';
 
-function Products({children}) {
+function Products({result}) {
   return (
     <>
       <section className='card-container'>
-        <Card/>
+        {result}
       </section>
     </>
 

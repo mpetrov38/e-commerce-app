@@ -8,7 +8,7 @@ function Colors({ handleRadioChange }) {
         <h2 className="sidebar-title color-title">Color</h2>
         <label className='sidebar-label'>
           <input type='radio' onChange={handleRadioChange} value='' name='test2' />
-          <span className='checkmark' />All
+          <span className='checkmark all' />All
         </label>
         <Input handleRadioChange={handleRadioChange} value='black' title='Black' name='test1' color='black' />
         <Input handleRadioChange={handleRadioChange} value='blue' title='Blue' name='test1' color='blue' />
@@ -16,7 +16,7 @@ function Colors({ handleRadioChange }) {
         <Input handleRadioChange={handleRadioChange} value='green' title='Green' name='test1' color='green' />
         <label className='sidebar-label'>
           <input type='radio' onChange={handleRadioChange} value="white" name='test1' />
-          <span className='checkmark' style={{ backgroundColor: "white", border: "2px solid black" }} />All
+          <span className='checkmark' style={{ backgroundColor: "white", border: "2px solid black" }} />White
         </label>
       </div>
     </>

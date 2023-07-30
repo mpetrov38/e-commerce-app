@@ -12,19 +12,19 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [query, setQuery] = useState("");
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
 
-  const inputFilter = products.filter(items => items.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1)
+  const inputFilter = products.filter(items => items.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase())!== -1
   );
 
-  const handleRadioChange = event => {
+  const handleRadioChange = (event) => {
     setSelectedCategory(event.target.value);
   }
 
-  const handleClick = event => {
-    setSelectedCategory(event.target.value);
+  const handleClick = (value) => {
+    setSelectedCategory(value);
   }
 
   function filterData(products, selected, query) {
@@ -59,9 +59,9 @@ function App() {
   return (
     <div className="App">
       <Sidebar handleRadioChange={handleRadioChange} />
-      <Navigation />
-      <Recomended />
-      <Products />
+      <Navigation query={query} handleInputChange={handleInputChange}/>
+      <Recomended handleClick={handleClick}/>
+      <Products result={result}/>
     </div>
   );
 }

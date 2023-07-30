@@ -1,8 +1,84 @@
+@media (max-width: 1024px) {
+  /* Styles for tablets and large phones */
+  .nav, .card-container, .recommended-flex, .recommended-title {
+    margin-left: 1rem;
+  }
 
+  .sidebar {
+    width: 20%;
+  }
+  
+  .input {
+    width: 10rem;
+  }
 
+  .card-image {
+    width: 10rem;
+  }
 
+  .card-container, .recommended-flex {
+    justify-content: center;
+  }
+}
 
+@media (max-width: 768px) {
+  /* Styles for medium phones and small tablets */
+  .nav, .card-container, .recommended-flex, .recommended-title {
+    margin-left: 0.5rem;
+  }
 
+  .sidebar {
+    display: none; /* or you can use a toggle button to show or hide sidebar */
+  }
+  
+  .input {
+    width: 8rem;
+  }
 
+  .card-image {
+    width: 8rem;
+  }
+  
+  .card-container, .recommended-flex {
+    flex-direction: column;
+  }
 
+  .card {
+    margin: 10px auto; /* center the card in the viewport */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for small phones */
+  .nav, .card-container, .recommended-flex, .recommended-title {
+    margin-left: 0.2rem;
+  }
+
+  .input {
+    width: 6rem;
+  }
+
+  .card-image {
+    width: 6rem;
+  }
+  
+  .card {
+    margin: 5px auto;
+    padding: 10px;
+  }
+
+  .btns {
+    padding: 5px 10px;
+    margin-right: 3px;
+    font-size: 12px;
+  }
+
+  .card-title, .reviews, .sidebar-title {
+    font-size: 14px;
+  }
+
+  .recommended-title {
+    font-size: 16px;
+  }
+}
 
