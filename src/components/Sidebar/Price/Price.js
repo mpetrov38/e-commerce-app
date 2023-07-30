@@ -1,19 +1,18 @@
-import './Price.css';
+import { Form } from "react-bootstrap";
 import Input from '../../Input';
+import './Price.css';
 
 function Price({ handleRadioChange }) {
   return (
-    <div className='ml'>
-      <h2 className="sidebar-title price-title">Price</h2>
-      <label className='sidebar-label'>
-        <input type='radio' onChange={handleRadioChange} value="" name='test2' />
-        <span className='checkmark' />All
-      </label>
-      <Input handleRadioChange={handleRadioChange} value={50} title='$0-50' name='test2' />
-      <Input handleRadioChange={handleRadioChange} value={100} title='$50-100' name='test2' />
-      <Input handleRadioChange={handleRadioChange} value={150} title='$100-150' name='test2' />
-      <Input handleRadioChange={handleRadioChange} value={200} title='Over $150' name='test2' />
-    </div>
+    <Form.Group>
+      <Form.Label><h2>Price</h2></Form.Label>
+      <Input handleRadioChange={handleRadioChange} value="" title="All" name="price" />
+      <Input handleRadioChange={handleRadioChange} value="0-50" title="$0-50" name="price" />
+      <Input handleRadioChange={handleRadioChange} value="50-100" title="$50-100" name="price" />
+      <Input handleRadioChange={handleRadioChange} value="100-150" title="$100-150" name="price" />
+      <Input handleRadioChange={handleRadioChange} value="150+" title="Over $150" name="price" />
+    </Form.Group>
   )
 }
+
 export default Price;

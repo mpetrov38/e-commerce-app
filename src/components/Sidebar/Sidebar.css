@@ -7,12 +7,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.5s ease;
+  transform: translateX(-100%);
+  background: #343a40;
+  color: white;
 }
 
-.logo-container {
-  margin-bottom: 4rem;
+.sidebar.sidebar-open {
+  transform: translateX(0);
 }
 
-.logo-container h1 {
-  margin-top: 1.3rem;
+.sidenav {
+  padding-top: 100px;
 }

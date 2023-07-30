@@ -24,3 +24,6 @@ li {
   color: #323232;
   cursor: pointer;
 }
+body {
+  overflow-x: hidden;
+}

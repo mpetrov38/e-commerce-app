@@ -1,24 +1,23 @@
-import { AiOutlineStar } from 'react-icons/ai'
-import { BiSolidCartAdd } from 'react-icons/bi'
+import { Card, Button } from 'react-bootstrap';
+import { AiOutlineStar } from 'react-icons/ai';
 
-function Card({img, title, star, reviews, prevPrice, newPrice}) {
+function MyCard({img, title, star, reviews, prevPrice, newPrice}) {
   return (
-    <section className='card'>
-      <img className='card-image' src={img} alt={title}></img>
-      <div className='card-details'>
-        <h3 className='card-title'>{title}</h3>
-        <section className='card-reviews'>
-          <AiOutlineStar className='ratings-star' star={star} />
+    <Card className='product-card h-100 '>
+      <Card.Img variant="top" className='card-image' src={img} />
+      <Card.Body className='card-details'>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text className='card-reviews'>
+          <AiOutlineStar className='ratings-star' />
           <span className='reviews'>{reviews}</span>
-        </section>
-        <section className='card-price'>
-          <div className='price'>
-            <del>${prevPrice}</del>${newPrice}
-          </div>
-          <div ><BiSolidCartAdd className='add-product' /></div>
-        </section>
-      </div>
-    </section> 
+        </Card.Text>
+        <div className='card-price'>
+          <del>{prevPrice}.00$</del>{newPrice}.00$
+        </div>
+        <Button className='btns'>Add to Cart</Button>
+      </Card.Body>
+    </Card> 
   )
 }
-export default Card;
+
+export default MyCard;

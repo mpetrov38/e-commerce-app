@@ -1,45 +1,62 @@
-.card-container{
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 20rem;
+.card-container {
   margin-top: 2rem;
-  z-index: -2;
 }
-.card{
+
+.card {
   margin: 20px;
   border: 2px solid #ededed;
   padding: 20px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Add this to make the card contents stack vertically. */
 }
 
-.card-image{
-  width: 13rem;
+.card-body {
+  flex-grow: 1; /* This will make the card body grow to take up all remaining space in the card. */
+  display: flex;
+  flex-direction: column; /* Make the card body contents stack vertically. */
+}
+
+.card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.card-title {
   margin-bottom: 1rem;
 }
 
-.card-title{
-  margin-bottom: 1rem;
-}
-.card-reviews{
+.card-reviews {
   margin-bottom: 1rem;
   display: flex;
 }
-.ratings-star{
+
+.ratings-star {
   color:#d5ab55;
 }
-.reviews{
+
+.reviews {
   font-size: 0.9rem;
   margin-left: 10px;
 }
-.card-price{
+
+.card-price {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: auto; /* Push the card price to the bottom. */
 }
-.price{
+
+.price {
   display: flex;
   flex-direction: column;
 }
-.add-product{
+
+.add-product {
   color: #535353; 
+}
+
+.my-col {
+  margin-bottom: 2rem;
 }

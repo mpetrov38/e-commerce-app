@@ -1,9 +1,18 @@
-function Input({ handleRadioChange, value, title, name, color }) {
+import './Input.css';
+import { Form } from "react-bootstrap";
+
+function Input({ handleRadioChange, value, title, name ,color}) {
   return (
-    <label className='sidebar-label'>
-      <input onChange={handleRadioChange} type='radio' value={value} name={name} />
-      <span className='checkmark' style={{ backgroundColor: color }}></span>{title}
-    </label>
+    <Form.Check 
+      custom
+      type="radio"
+      id={`custom-${name}-${value}`}
+      label={title}
+      value={value}
+      onChange={handleRadioChange}
+      name={name}
+    />
   )
 }
+
 export default Input;

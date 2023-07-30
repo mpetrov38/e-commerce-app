@@ -1,0 +1,13 @@
+.checkmark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+/* Show the checkmark when the input is checked */
+.form-check-input:checked ~ .checkmark {
+  background-color: #007bff;
+}

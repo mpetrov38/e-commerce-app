@@ -1,43 +1,18 @@
-import './Category.css';
+import { Form } from "react-bootstrap";
 import Input from '../../Input';
+import './Category.css';
 
 function Category({handleRadioChange}) {
-
   return (
-    <div>
-      <h2 className='sidebar-title'>Category</h2>
-      <div>
-       <label className='sidebar-label'>
-          <input type='radio' onChange={handleRadioChange} value="" name='test'/>
-          <span className='checkmark'/>All
-       </label>
-
-       <Input
-       handleRadioChange={handleRadioChange}
-       value="sneakers"
-       title="Sneakers"
-       name="test"
-       />
-       <Input
-       handleRadioChange={handleRadioChange}
-       value="flats"
-       title="Flats"
-       name="test"
-       />
-       <Input
-       handleRadioChange={handleRadioChange}
-       value="sandals"
-       title="Sandals"
-       name="test"
-       />
-       <Input
-       handleRadioChange={handleRadioChange}
-       value="heels"
-       title="Heels"
-       name="test"
-       />
-      </div>
-    </div>
+    <Form.Group>
+      <Form.Label><h2>Category</h2></Form.Label>
+      <Input handleRadioChange={handleRadioChange} value="" title="All" name="category" />
+      <Input handleRadioChange={handleRadioChange} value="sneakers" title="Sneakers" name="category" />
+      <Input handleRadioChange={handleRadioChange} value="flats" title="Flats" name="category" />
+      <Input handleRadioChange={handleRadioChange} value="sandals" title="Sandals" name="category" />
+      <Input handleRadioChange={handleRadioChange} value="heels" title="Heels" name="category" />
+    </Form.Group>
   )
 }
+
 export default Category;
