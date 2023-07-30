@@ -36,6 +36,10 @@
   justify-content: space-around;
   align-items: center;
 }
+.price{
+  display: flex;
+  flex-direction: column;
+}
 .add-product{
   color: #535353; 
 }
