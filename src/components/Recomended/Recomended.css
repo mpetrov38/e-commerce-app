@@ -9,3 +9,13 @@
   margin-top: 20px;
   font-size: 20px;
 }
+
+.recomended-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select-menu {
+  margin-top: 65px;
+  margin-right: 100px;
+}

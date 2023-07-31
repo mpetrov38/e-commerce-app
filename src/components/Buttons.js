@@ -1,6 +1,6 @@
 function Button({ onClickHandler, value, title }) {
   return (
-    <button className="btns" onClick={() => onClickHandler(value)}>
+    <button className="btns btn-secondary" onClick={() => onClickHandler(value)}>
       {title}
     </button>
   );

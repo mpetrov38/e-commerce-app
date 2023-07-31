@@ -60,3 +60,10 @@
 .my-col {
   margin-bottom: 2rem;
 }
+.load-button{
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}

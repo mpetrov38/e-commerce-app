@@ -14,7 +14,7 @@ function MyCard({img, title, star, reviews, prevPrice, newPrice}) {
         <div className='card-price'>
           <del>{prevPrice}.00$</del>{newPrice}.00$
         </div>
-        <Button className='btns'>Add to Cart</Button>
+        <Button className='btns btn-secondary'>Add to Cart</Button>
       </Card.Body>
     </Card> 
   )

@@ -20,7 +20,6 @@ const Navigation = ({ handleInputChange, query }) => {
               placeholder="Search for shoes"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">Search</button>
           </form>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
