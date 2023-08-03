@@ -9,11 +9,11 @@ function Recomended({ handleClick, handleSelectClick }) {
           Recomended
         </h2>
         <div className='recommended-flex'>
-          <Button onClickHandler={handleClick} value="" title="All Products"></Button>
-          <Button onClickHandler={handleClick} value="Nike" title="Nike"></Button>
-          <Button onClickHandler={handleClick} value="Adidas" title="Adidas"></Button>
-          <Button onClickHandler={handleClick} value="Puma" title="Puma"></Button>
-          <Button onClickHandler={handleClick} value="Vans" title="Vans"></Button>
+          <Button onClickHandler={handleClick} value="Nike" title="Nike" name="company"></Button>
+          <Button onClickHandler={handleClick} value="Adidas" title="Adidas" name="company"></Button>
+          <Button onClickHandler={handleClick} value="Puma" title="Puma" name="company"></Button>
+          <Button onClickHandler={handleClick} value="Vans" title="Vans" name="company"></Button>
+
         </div>
       </div>
       <div>

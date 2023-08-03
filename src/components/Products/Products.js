@@ -1,6 +1,6 @@
 import { Row, Col } from 'react-bootstrap';
 import './Products.css';
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 function Products({ result, loadMore, setLoadMore, imagePerRow }) {
 
@@ -20,7 +20,7 @@ function Products({ result, loadMore, setLoadMore, imagePerRow }) {
 
   return (
     <>
-      <Row xs={2} md={6} lg={12} className="g-4 product-container" style={{ overflow: 'auto' }}>
+      <Row xs={2} md={6} lg={12} className="g-4 product-container" style={{ overflow: 'auto', margin: 0 }}>
         {result?.slice(0, loadMore)?.map((item, idx) => (
           <Col xs={12} md={6} lg={3} key={idx} className='my-col' ref={bodyRef}>
             {item}

@@ -1,7 +1,10 @@
 import { Card, Button } from 'react-bootstrap';
 import { AiOutlineStar } from 'react-icons/ai';
+import Rating from './Rating/Rating';
+import { useState } from 'react';
 
 function MyCard({img, title, star, reviews, prevPrice, newPrice}) {
+  const [rate,setRating] = useState(5);
   return (
     <Card className='product-card h-100 '>
       <Card.Img variant="top" className='card-image' src={img} />
