@@ -4,7 +4,7 @@ import Button from '../Buttons';
 function Recomended({ handleClick, handleSelectClick }) {
   return (
     <div className='recomended-section'>
-      <div >
+      <div className='recomended-items'>
         <h2 className='recommended-title'>
           Recomended
         </h2>
@@ -16,9 +16,9 @@ function Recomended({ handleClick, handleSelectClick }) {
 
         </div>
       </div>
-      <div>
+      <div className='m'>
         <select className='btns select-menu' onChange={handleSelectClick}>
-          <option value="" disabled selected>Choose an option...</option>
+          <option value="" disabled selected>Sort Products</option>
           <option value="price-ascending">Sort by Highest Price</option>
           <option value="price-descending">Sort by Lowest Price</option>
           <option value="a-z">Sort by Name ascending</option>

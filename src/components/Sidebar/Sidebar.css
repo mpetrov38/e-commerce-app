@@ -1,7 +1,5 @@
 .sidebar {
-  width: 15%;
   position: fixed;
-  height: 100%;
   border-right: 2px solid #e5e5e5;
   z-index: 3;
   display: flex;
@@ -11,6 +9,28 @@
   transform: translateX(-100%);
   background: #343a40;
   color: white;
+  padding: 0px 15px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.btn-transition {
+  position: fixed;
+  z-index: 99999;
+  top: 50%;
+  transition: left 0.5s ease;
+}
+
+.position {
+  top: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .position {
+    position: absolute;
+    top: 3.2%;
+  }
 }
 
 .sidebar.sidebar-open {
@@ -21,3 +41,9 @@
   padding-top: 100px;
 }
 
+.sidebar-title {
+  font-weight: normal;
+}
+.reset-filters{
+  margin-top: 2rem;
+}

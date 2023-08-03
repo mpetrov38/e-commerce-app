@@ -7,7 +7,6 @@
 }
 
 
-/* Show the checkmark when the input is checked */
 .form-check-input:checked ~ .checkmark {
   background-color: #007bff;
 }

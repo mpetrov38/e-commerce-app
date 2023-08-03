@@ -5,7 +5,7 @@ import './Colors.css';
 function Colors({ handleRadioChange, selectedCategory }) {
   return (
     <Form.Group>
-      <Form.Label><h2>Color</h2></Form.Label>
+      <Form.Label><h4 className="color-title">Color</h4></Form.Label>
       <Input handleRadioChange={handleRadioChange} selectedCategory={selectedCategory} value="" title="All" name="color" />
       <Input handleRadioChange={handleRadioChange} selectedCategory={selectedCategory} value="black" title="Black" name="color" />
       <Input handleRadioChange={handleRadioChange} selectedCategory={selectedCategory} value="blue" title="Blue" name="color" />

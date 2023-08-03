@@ -5,7 +5,7 @@ import './Price.css';
 function Price({ handleRadioChange, selectedCategory }) {
   return (
     <Form.Group>
-      <Form.Label><h2>Price</h2></Form.Label>
+      <Form.Label><h4 className="price-title">Price</h4></Form.Label>
       <Input handleRadioChange={handleRadioChange} selectedCategory={selectedCategory} value="" title="All" name="price" />
       <Input handleRadioChange={handleRadioChange} selectedCategory={selectedCategory} value="0-50" title="$0-50" name="price" />
       <Input handleRadioChange={handleRadioChange} selectedCategory={selectedCategory} value="50-100" title="$50-100" name="price" />

@@ -7,11 +7,10 @@ import Sidebar from './components/Sidebar/Sidebar';
 import products from './data/data';
 import Card from './components/Card';
 import Footer from './components/Footer/Footer';
+import Cart from './components/Cart/Cart';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-//TODO make star component work 
-//Make add to cart display an alert succes
-//Make a cart component
-//Pitai valio kak da se napravi responsive recomended i sidebar
+
 
 function App() {
   const imagePerRow = 4;
@@ -26,7 +25,6 @@ function App() {
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
-
 
   const handleRadioChange = (event) => {
     setSelectedCategory((prevSelected) => ({
@@ -113,13 +111,24 @@ function App() {
   ));
 
   return (
-    <div className="App">
-      <Sidebar handleRadioChange={handleRadioChange} selectedCategory={selectedCategory} handleClick={handleClearFilterClick} />
-      <Navigation query={query} handleInputChange={handleInputChange} />
-      <Recomended handleClick={handleClick} handleSelectClick={handleSelectClick} />
-      <Products result={renderedCards} loadMore={loadMore} setLoadMore={setLoadMore} imagePerRow={imagePerRow} />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Sidebar handleRadioChange={handleRadioChange} selectedCategory={selectedCategory} handleClick={handleClearFilterClick} />
+        <Navigation query={query} handleInputChange={handleInputChange} />
+        <Routes>
+          <Route path="/" element=
+            {
+              <>
+                <Recomended handleClick={handleClick} handleSelectClick={handleSelectClick} />
+                <Products result={renderedCards} loadMore={loadMore} setLoadMore={setLoadMore} imagePerRow={imagePerRow} />
+              </>
+            }
+          />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

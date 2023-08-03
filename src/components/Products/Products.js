@@ -5,14 +5,16 @@ import { useRef, useEffect } from 'react';
 function Products({ result, loadMore, setLoadMore, imagePerRow }) {
 
   const bodyRef = useRef(null);
+  const isMobile = () => window.innerWidth <= 768;
+
 
   useEffect(() => {
-    if (bodyRef.current) {
+    if (bodyRef.current && !isMobile()) {
       bodyRef.current.scrollIntoView({
         behavior: 'smooth',
       });
     }
-  }, [loadMore])
+  }, [loadMore]);
 
   function loadHandler() {
     setLoadMore(loadMore + imagePerRow);
@@ -20,9 +22,9 @@ function Products({ result, loadMore, setLoadMore, imagePerRow }) {
 
   return (
     <>
-      <Row xs={2} md={6} lg={12} className="g-4 product-container" style={{ overflow: 'auto', margin: 0 }}>
+      <Row xs={2} md={6} lg={12} className="g-4 product-container" >
         {result?.slice(0, loadMore)?.map((item, idx) => (
-          <Col xs={12} md={6} lg={3} key={idx} className='my-col' ref={bodyRef}>
+          <Col xs={12} md={6} lg={3} key={idx} className='my-col' ref={bodyRef} >
             {item}
           </Col>
         ))}

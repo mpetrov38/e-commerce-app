@@ -5,35 +5,38 @@ import './Category.css';
 function Category({ handleRadioChange, selectedCategory }) {
   return (
     <Form.Group>
-      <Form.Label><h2>Category</h2></Form.Label>
-      <Input
-        handleRadioChange={handleRadioChange}
-        selectedCategory={selectedCategory}
-        value="sneakers" 
-        title="Sneakers"
-        name="category"
-      />
-      <Input
-        handleRadioChange={handleRadioChange}
-        selectedCategory={selectedCategory}
-        value="flats" 
-        title="Flats"
-        name="category"
-      />
-      <Input
-        handleRadioChange={handleRadioChange}
-        selectedCategory={selectedCategory}
-        value="sandals" 
-        title="Sandals"
-        name="category"
-      />
-      <Input
-        handleRadioChange={handleRadioChange}
-        selectedCategory={selectedCategory}
-        value="heels" 
-        title="Heels"
-        name="category"
-      />
+      <Form.Label><h4 className="category-title">Category</h4></Form.Label>
+      <div className="sidebar-items">
+        <Input
+          handleRadioChange={handleRadioChange}
+          selectedCategory={selectedCategory}
+          value="sneakers"
+          title="Sneakers"
+          name="category"
+        />
+        <Input
+          handleRadioChange={handleRadioChange}
+          selectedCategory={selectedCategory}
+          value="flats"
+          title="Flats"
+          name="category"
+        />
+        <Input
+          handleRadioChange={handleRadioChange}
+          selectedCategory={selectedCategory}
+          value="sandals"
+          title="Sandals"
+          name="category"
+        />
+        <Input
+          handleRadioChange={handleRadioChange}
+          selectedCategory={selectedCategory}
+          value="heels"
+          title="Heels"
+          name="category"
+        />
+      </div>
+
     </Form.Group>
   )
 }

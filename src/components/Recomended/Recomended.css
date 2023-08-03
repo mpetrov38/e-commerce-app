@@ -1,21 +1,38 @@
 .recommended-flex {
   display: flex;
-  margin-left: 100px;
+  flex-wrap: 'wrap';
 }
 
 .recommended-title {
-  margin-left: 20rem;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  width: 100%;
   font-size: 20px;
+  text-align: center;
 }
 
 .recomended-section {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .select-menu {
-  margin-top: 65px;
-  margin-right: 100px;
+  display: flex;
+  align-items: end;
+
+}
+
+.m {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .m {
+    margin-top: 10px;
+  }
+}
+
+.recomended-items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

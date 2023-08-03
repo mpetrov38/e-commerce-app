@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className='footer-container'>
       <div className='footer-links'>
-        <a href="terms-and-conditions.html">T&C</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="contact-us.html">Contact Us</a>
+        <a href="/">T&C</a>
+        <a href="/">Privacy Policy</a>
+        <a href="/">Contact Us</a>
       </div>
     </footer>
   );
