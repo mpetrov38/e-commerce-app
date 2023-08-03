@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import Products from './components/Products/Products';
 import Recomended from './components/Recomended/Recomended';
@@ -9,8 +8,6 @@ import Card from './components/Card';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-
 
 function App() {
   const imagePerRow = 4;

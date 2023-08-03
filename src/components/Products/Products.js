@@ -3,10 +3,8 @@ import './Products.css';
 import { useRef, useEffect } from 'react';
 
 function Products({ result, loadMore, setLoadMore, imagePerRow }) {
-
   const bodyRef = useRef(null);
   const isMobile = () => window.innerWidth <= 768;
-
 
   useEffect(() => {
     if (bodyRef.current && !isMobile()) {
@@ -41,7 +39,6 @@ function Products({ result, loadMore, setLoadMore, imagePerRow }) {
         </div>
         )
       }
-
     </>
   )
 }

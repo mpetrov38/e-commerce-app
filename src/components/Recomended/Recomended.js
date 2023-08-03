@@ -13,12 +13,11 @@ function Recomended({ handleClick, handleSelectClick }) {
           <Button onClickHandler={handleClick} value="Adidas" title="Adidas" name="company"></Button>
           <Button onClickHandler={handleClick} value="Puma" title="Puma" name="company"></Button>
           <Button onClickHandler={handleClick} value="Vans" title="Vans" name="company"></Button>
-
         </div>
       </div>
       <div className='m'>
         <select className='btns select-menu' onChange={handleSelectClick}>
-          <option value="" disabled selected>Sort Products</option>
+          <option value="">Sort Products</option>
           <option value="price-ascending">Sort by Highest Price</option>
           <option value="price-descending">Sort by Lowest Price</option>
           <option value="a-z">Sort by Name ascending</option>

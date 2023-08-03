@@ -3,6 +3,7 @@ import png from "../../images/—Pngtree—bobtoon sad shopping bag cartoon_6457
 import { AiFillPlusSquare, AiFillMinusSquare } from 'react-icons/ai';
 import './Cart.css';
 import { toast } from 'react-toastify';
+import { MdCancel } from 'react-icons/md';
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
@@ -15,14 +16,24 @@ function Cart() {
   const handleQuantityChange = (index, amount) => {
     const newCartItems = [...cartItems];
     newCartItems[index].quantity += amount;
-    if (newCartItems[index].quantity < 1) newCartItems[index].quantity = 1;
+    if (newCartItems[index].quantity < 1) {
+      newCartItems[index].quantity = 1;
+    }
     setCartItems(newCartItems);
     localStorage.setItem('cartObjects', JSON.stringify(newCartItems));
+
   };
 
   const getTotalPrice = () => {
     return cartItems.reduce((total, item) => total + item.quantity * item.newPrice, 0);
   };
+
+  const removeFromCart = (index) => {
+    const newCartItems = [...cartItems];
+    newCartItems.splice(index, 1);
+    setCartItems(newCartItems);
+    localStorage.setItem('cartObjects', JSON.stringify(newCartItems));
+  }
 
   const handleCheckout = () => {
     localStorage.removeItem('cartObjects');
@@ -34,7 +45,7 @@ function Cart() {
     <div className='cart-container'>
       {cartItems.length === 0 ? (
         <>
-          <img src={png} className='sad-cart-image'></img>
+          <img src={png} className='sad-cart-image' alt="sad cart"></img>
           <span>Your bag is sad and empty, Go shopping!</span>
           <button className='btns btn-secondary'><a style={{ textDecoration: "none", color: "black" }} href='/'>Lets go shopping</a></button>
         </>
@@ -51,6 +62,7 @@ function Cart() {
                 <button className='btns btn-secondary' onClick={() => handleQuantityChange(index, 1)}><AiFillPlusSquare /></button>
               </div>
               <span className='span-with-padding'>{item.newPrice}.00$</span>
+              <button onClick={() => removeFromCart(index)} className='btns btn-secondary'><MdCancel /></button>
             </div>
           ))}
           <div className='checkout-btn-container'>

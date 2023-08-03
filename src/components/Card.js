@@ -4,7 +4,6 @@ import '../components/Products/Products.css';
 import { toast } from 'react-toastify';
 
 function MyCard({ img, title, star, reviews, prevPrice, newPrice }) {
-
   const quantity = 1;
 
   const handleClick = () => {

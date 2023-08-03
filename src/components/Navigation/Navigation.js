@@ -3,6 +3,10 @@ import { FiHeart } from 'react-icons/fi';
 import { AiOutlineUserAdd, AiOutlineHome, AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Navigation = ({ handleInputChange, query }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <nav className="navbar sticky-top navbar-expand-lg bg-dark text-white navbar-light bg-light">
       <div className="container-fluid">
@@ -14,7 +18,7 @@ const Navigation = ({ handleInputChange, query }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <form className="d-flex mx-auto">
+          <form className="d-flex mx-auto" onSubmit={handleSubmit}>
             <input
               className="form-control me-2"
               type="search"
@@ -35,7 +39,6 @@ const Navigation = ({ handleInputChange, query }) => {
                 <AiOutlineUserAdd className="nav-icons" />
               </a>
             </li>
-
           </ul>
         </div>
       </div>
